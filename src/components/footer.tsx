@@ -7,7 +7,7 @@ export const Footer = () => {
             <div>
             </div>
             <div>
-                <Link href="https://github.com/matthewmartinuzzodev/bestblog" className="hover:text-gray-600">
+                <Link href="https://github.com/matthewmartinuzzodev/bestblog" className="hover:text-gray-600 m-8">
                     <Icon icon="ri:github-line" width="90" height="90" />
                 </Link>
             </div>
