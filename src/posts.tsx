@@ -1,6 +1,6 @@
 export type Post = {
-    book: string;
-    content: string;
+    book?: string;
+    content?: string;
 }
 
 const post1: Post = {
