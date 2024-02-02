@@ -58,7 +58,7 @@ export const genres = ["Philosophy", "Fantasy"]
 
 export const posts : Post[] = [kafka, fiveDialogues, theAlchemist, theFinalEmpire, wellOfAscension, theHeroOfAges]
 
-export const postsMap: Map<string, Post> = new Map();
+export const postsMap = new Map<string, Post>();
 postsMap.set(kafka.book, kafka);
 postsMap.set(fiveDialogues.book, fiveDialogues);
 postsMap.set(theAlchemist.book, theAlchemist);
