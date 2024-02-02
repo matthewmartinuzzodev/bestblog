@@ -16,12 +16,14 @@ export const PostView = (post : Post | undefined) => {
                     <TitleText book={post.book}/>
                     <div>{post.author}</div>
                 </div>
-                <Image 
-                    src={imageUrl} 
-                    alt={imageUrl} 
-                    width={240} 
-                    height={64}
-                />
+                <div className="ml-60">
+                    <Image 
+                        src={imageUrl} 
+                        alt={imageUrl} 
+                        width={240} 
+                        height={64}
+                    />
+                </div>
             </div>
             <BodyText content={post.content}/>
         </div>
