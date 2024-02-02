@@ -5,18 +5,15 @@ import { useState, useEffect } from "react";
 import { PageLayout } from "../components/layout";
 import { ContentView } from "~/components/contentView";
 import { PostView } from "~/components/postView";
-import { posts } from "~/posts";
+import { posts, postsMap } from "~/posts";
 
 import type { Post } from "~/posts";
 
 export default function MainView() {
-  const [post, setPost] = useState<Post | null>(null);
+  const [post, setPost] = useState<Post | undefined>(postsMap.get("Kafka on the Shore"));
 
-  useEffect(()=> {
-    if(posts?.[0]){
-      setPost(posts[0]);
-    }
-  }, [posts]);
+  if (!post?.book) return <div></div>;
+
 
   return (
     <div className="">
@@ -24,7 +21,7 @@ export default function MainView() {
         <title>betterblog</title>
       </Head>
       <PageLayout>
-        <ContentView posts={posts} setPost={setPost} />
+        <ContentView posts={postsMap} setPost={setPost} />
         <PostView {...post}/>
       </PageLayout>
     </div>
